@@ -6,12 +6,12 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="section bg-gray-50">
+    <section id="faq" className="section-alt">
       <div className="container max-w-3xl">
         <h2 className="heading-2 text-center">FAQ</h2>
-        <div className="mt-10 divide-y divide-gray-200 border border-gray-200 rounded-2xl bg-white">
+        <div className="mt-8 soft-surface rounded-3xl overflow-hidden">
           {faqs.map(({ q, a }) => (
-            <details key={q} className="group p-6">
+            <details key={q} className="group p-6 border-b last:border-b-0 border-slate-200/60">
               <summary className="flex cursor-pointer items-center justify-between">
                 <span className="font-semibold">{q}</span>
                 <span className="text-xl transition group-open:rotate-45">+</span>

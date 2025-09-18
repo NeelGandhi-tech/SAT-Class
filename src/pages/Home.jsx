@@ -6,19 +6,26 @@ import Pricing from '../components/pricing'
 import Instructors from '../components/instructors'
 import FAQ from '../components/faq'
 import Contact from '../components/contact'
+import { FadeIn } from '../components/Motion'
+import Marquee from '../components/Marquee'
+import TestimonialsCarousel from '../components/TestimonialsCarousel'
+import Gallery from '../components/Gallery'
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <WhyUsPlus />
+      <Marquee />
+      <FadeIn delay={0.05}><WhyUsPlus /></FadeIn>
       {/* Results + charts */}
-      <ResultsShowcase />
-      <Services />
-      <Pricing />
-      <Instructors />
-      <FAQ />
-      <Contact />
+      <FadeIn delay={0.1}><ResultsShowcase /></FadeIn>
+      <FadeIn delay={0.1}><Services /></FadeIn>
+      <FadeIn delay={0.12}><Pricing /></FadeIn>
+      <FadeIn delay={0.12}><TestimonialsCarousel /></FadeIn>
+      <FadeIn delay={0.12}><Gallery /></FadeIn>
+      <FadeIn delay={0.12}><Instructors /></FadeIn>
+      <FadeIn delay={0.14}><FAQ /></FadeIn>
+      <FadeIn delay={0.16}><Contact /></FadeIn>
     </main>
   )
 }

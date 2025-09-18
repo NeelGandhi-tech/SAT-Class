@@ -6,12 +6,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section bg-gray-50">
+    <section id="services" className="section-alt">
       <div className="container">
         <h2 className="heading-2 text-center">Programs</h2>
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
+        <div className="mt-8 grid md:grid-cols-3 gap-6">
           {services.map((s) => (
-            <article key={s.name} className="card">
+            <article key={s.name} className="soft-surface p-7 hover:-translate-y-0.5 transition">
               <h3 className="font-semibold text-lg">{s.name}</h3>
               <ul className="mt-3 list-disc list-inside subtle space-y-2">
                 {s.points.map((p) => <li key={p}>{p}</li>)}

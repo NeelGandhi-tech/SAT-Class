@@ -1,3 +1,5 @@
+import { trackEvent } from '../analytics'
+
 const tiers = [
   { name: "Starter", price: "$59/hr", features: ["Weekly 1:1 session", "Homework plan", "Email support"] },
   { name: "Plus", price: "$89/hr", features: ["2× weekly 1:1", "Full analytics dashboard", "Priority support"], featured: true },
@@ -8,19 +10,20 @@ export default function Pricing() {
   return (
     <section id="pricing" className="section">
       <div className="container">
-        <h2 className="text-center text-4xl font-bold">Transparent <span className="headline-gradient">Pricing</span></h2>
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
+        <h2 className="text-center text-5xl font-extrabold">Transparent <span className="headline-gradient">Pricing</span></h2>
+        <p className="mt-2 text-center text-slate-600 max-w-2xl mx-auto">Pick the plan that fits your goals. Upgrade or adjust any time.</p>
+        <div className="mt-8 grid md:grid-cols-3 gap-6">
           {tiers.map((t) => (
             <div
               key={t.name}
-              className={`card ${t.featured ? "ring-2 ring-offset-2 ring-offset-white ring-indigo-200" : ""}`}
+              className={`card p-7 hover:-translate-y-0.5 ${t.featured ? "ring-2 ring-offset-2 ring-offset-white ring-indigo-200" : ""}`}
             >
-              <h3 className="text-lg font-semibold">{t.name}</h3>
-              <div className="mt-2 text-3xl font-extrabold">{t.price}</div>
+              <h3 className="text-xl font-semibold">{t.name}</h3>
+              <div className="mt-2 text-4xl font-extrabold">{t.price}</div>
               <ul className="mt-4 list-disc list-inside muted space-y-2">
                 {t.features.map((f) => <li key={f}>{f}</li>)}
               </ul>
-              <a href="#contact" className="btn-primary w-full mt-6">Choose {t.name}</a>
+              <a href="#contact" onClick={() => trackEvent('cta_click', { location: 'pricing', tier: t.name })} className="btn-primary w-full mt-6 py-3">Choose {t.name}</a>
             </div>
           ))}
         </div>
