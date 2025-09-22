@@ -26,13 +26,15 @@ export default function Navbar() {
           <a href="/#pricing" className="hover:text-indigo-600">Pricing</a>
           <a href="/#faq" className="hover:text-indigo-600">FAQ</a> */}
         </nav>
-        <Link
-          to="/book"
-          onClick={() => trackEvent('cta_click', { location: 'navbar', action: 'book_free_consult' })}
-          className="inline-flex items-center rounded-xl bg-indigo-600 text-white px-4 py-2 text-sm font-semibold shadow hover:bg-indigo-700"
-        >
-          Book Consult
-        </Link>
+        <a
+          href="/#contact"
+          onClick={() =>
+              trackEvent('cta_click', { location: 'navbar', action: 'book_free_consult' })
+            }
+            className="inline-flex items-center rounded-xl bg-indigo-600 text-white px-4 py-2 text-sm font-semibold shadow hover:bg-indigo-700"
+          >
+            Book Consult
+          </a>
       </div>
     </header>
   )
