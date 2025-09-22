@@ -17,7 +17,9 @@ export default function WhyUsPlus() {
   return (
     <>
       {/* Comparison */}
-      <section id="whyus" className="py-20 bg-gray-50">
+      <br></br>
+      <br></br>
+      <section id="whyus" className=" bg-gray-50">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center">Why Us vs. Others</h2>
           <div className="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">

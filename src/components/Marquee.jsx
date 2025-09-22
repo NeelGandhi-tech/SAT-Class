@@ -11,9 +11,11 @@ export default function Marquee() {
           {doubled.map((t, i) => (
             <span key={`${t}-${i}`} className="text-sm font-medium text-slate-700">{t}</span>
           ))}
+      
         </div>
       </div>
     </div>
+    
   )
 }
 

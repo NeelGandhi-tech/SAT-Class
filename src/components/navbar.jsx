@@ -21,10 +21,10 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-6 text-sm font-medium">
           <NavLink to="/" className={({isActive}) => isActive ? 'text-indigo-600 border-b-2 border-indigo-600 pb-1' : 'hover:text-indigo-600'}>Home</NavLink>
           <NavLink to="/about" className={({isActive}) => isActive ? 'text-indigo-600 border-b-2 border-indigo-600 pb-1' : 'hover:text-indigo-600'}>About</NavLink>
-          <NavLink to="/book" className={({isActive}) => isActive ? 'text-indigo-600 border-b-2 border-indigo-600 pb-1' : 'hover:text-indigo-600'}>Book</NavLink>
-          <a href="/#services" className="hover:text-indigo-600">Programs</a>
+          {/* <NavLink to="/book" className={({isActive}) => isActive ? 'text-indigo-600 border-b-2 border-indigo-600 pb-1' : 'hover:text-indigo-600'}>Book</NavLink> */}
+          {/* <a href="/#services" className="hover:text-indigo-600">Programs</a>
           <a href="/#pricing" className="hover:text-indigo-600">Pricing</a>
-          <a href="/#faq" className="hover:text-indigo-600">FAQ</a>
+          <a href="/#faq" className="hover:text-indigo-600">FAQ</a> */}
         </nav>
         <Link
           to="/book"

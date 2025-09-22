@@ -18,14 +18,16 @@ export default function Home() {
       <Marquee />
       <FadeIn delay={0.05}><WhyUsPlus /></FadeIn>
       {/* Results + charts */}
-      <FadeIn delay={0.1}><ResultsShowcase /></FadeIn>
-      <FadeIn delay={0.1}><Services /></FadeIn>
-      <FadeIn delay={0.12}><Pricing /></FadeIn>
-      <FadeIn delay={0.12}><TestimonialsCarousel /></FadeIn>
-      <FadeIn delay={0.12}><Gallery /></FadeIn>
-      <FadeIn delay={0.12}><Instructors /></FadeIn>
-      <FadeIn delay={0.14}><FAQ /></FadeIn>
-      <FadeIn delay={0.16}><Contact /></FadeIn>
+      {/* <FadeIn delay={0.05}><ResultsShowcase /></FadeIn> */}
+            <FadeIn delay={0.05}><Pricing /></FadeIn>
+      <FadeIn delay={0.05}><Services /></FadeIn>
+
+      <FadeIn delay={0.05}><TestimonialsCarousel /></FadeIn>
+      {/* <FadeIn delay={0.12}><Gallery /></FadeIn> */}
+      <FadeIn delay={0.05}><Instructors /></FadeIn>
+ 
+      <FadeIn delay={0.05}><Contact /></FadeIn>
+      <FadeIn delay={0.05}><FAQ /></FadeIn>
     </main>
   )
 }

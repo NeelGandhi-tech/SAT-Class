@@ -8,7 +8,6 @@ export default function Contact() {
   const [message, setMessage] = useState('');
 
   const formspreeEndpoint = useMemo(() => {
-    // Configure via Vite env variable: VITE_FORMSPREE_ID
     const id = import.meta.env.VITE_FORMSPREE_ID;
     return id ? `https://formspree.io/f/${id}` : '';
   }, []);
@@ -27,7 +26,7 @@ export default function Contact() {
     }
 
     if (!formspreeEndpoint) {
-      setStatus("Submitted locally. Add VITE_FORMSPREE_ID to enable email.");
+      setStatus("Submitted locally.");
       form.reset();
       return;
     }
@@ -59,6 +58,7 @@ export default function Contact() {
     <section id="contact" className="section">
       <div className="container max-w-2xl">
         <h2 className="heading-2 text-center">Book a Free Consult</h2>
+        <br></br>
         <form onSubmit={handleSubmit} className="card space-y-4">
           <input type="hidden" name="subject" value="New SAT consult request from website" />
           <input type="hidden" name="interest" value={interest} />
@@ -103,10 +103,14 @@ export default function Contact() {
               <input name="phone" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             <div>
               <label className="block text-sm font-medium">Target Test Date</label>
               <input name="date" placeholder="e.g., December 7" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Current Score</label>
+              <input name="target" placeholder="If none, put N/A" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium">Target Score</label>
